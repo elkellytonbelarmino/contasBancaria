@@ -1,6 +1,6 @@
 <?php
 
-namespace  Alura\Banco\Modelo;
+namespace Alura\Banco\Modelo;
 
 class Pessoa
 {
