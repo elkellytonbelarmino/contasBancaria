@@ -1,10 +1,14 @@
 <?php
 
-require_once 'src/Modelo/Conta/Conta.php';
-require_once 'src/Modelo/Endereco.php';
-require_once 'src/Modelo/Pessoa.php';
-require_once 'src/Modelo/Conta/Titular.php';
-require_once 'src/Modelo/CPF.php';
+spl_autoload_register(function (string $nomeCompletoDaClasse) {
+    $caminhoArquivo = str_replace('Alura\\Banco', 'src', $nomeCompletoDaClasse);
+    $caminhoArquivo = str_replace('\\', DIRECTORY_SEPARATOR, $caminhoArquivo);
+    $caminhoArquivo .= '.php';
+
+    if (file_exists($caminhoArquivo)) {
+        require_once $caminhoArquivo;
+    }
+});
 
 use Alura\Banco\Modelo\Conta\Titular;
 use Alura\Banco\Modelo\Endereco;
