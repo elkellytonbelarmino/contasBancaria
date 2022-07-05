@@ -7,7 +7,7 @@ class Endereco
     private string $cidade;
     private string $bairro;
     private string $rua;
-    private string $numero;
+    private float $numero;
 
     public function __construct(string $cidade, string $bairro, string $rua, string $numero)
     {
@@ -36,6 +36,4 @@ class Endereco
     {
         return $this->numero;
     }
-
-
 }
