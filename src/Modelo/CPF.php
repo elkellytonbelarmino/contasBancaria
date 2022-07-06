@@ -4,7 +4,7 @@ namespace Alura\Banco\Modelo;
 
 class CPF
 {
-    private float $numero;
+    private string $numero;
 
     public function __construct(string $numero)
     {
